@@ -1,8 +1,8 @@
 const GratusLogo = ({ size = "md" }: { size?: "sm" | "md" | "lg" }) => {
   const sizes = {
-    sm: { main: "text-xl", sub: "text-[0.6rem] tracking-[0.35em]", gap: "gap-0" },
-    md: { main: "text-2xl md:text-3xl", sub: "text-[0.65rem] md:text-[0.75rem] tracking-[0.35em]", gap: "gap-0.5" },
-    lg: { main: "text-4xl md:text-5xl", sub: "text-sm md:text-base tracking-[0.4em]", gap: "gap-1" },
+    sm: { main: "text-xl", sub: "text-[0.7rem] tracking-[0.35em]", gap: "gap-0" },
+    md: { main: "text-2xl md:text-3xl", sub: "text-xs md:text-sm tracking-[0.35em]", gap: "gap-0.5" },
+    lg: { main: "text-4xl md:text-5xl", sub: "text-lg md:text-xl tracking-[0.4em]", gap: "gap-1" },
   };
 
   const s = sizes[size];
