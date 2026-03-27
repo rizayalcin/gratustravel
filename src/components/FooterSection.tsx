@@ -18,7 +18,7 @@ const FooterSection = () => {
           {/* Navigation */}
           <div className="flex flex-col gap-4">
             <span className="font-body text-xs text-primary tracking-widest uppercase mb-2">Navigasyon</span>
-            {["Hakkımızda", "Hizmetler", "Projeler", "Destinasyonlar", "İletişim"].map((item) => (
+            {["Hakkımızda", "Hizmetler", "Projeler", "Catering", "Fuar Standı", "İletişim"].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
                 {item}
               </a>

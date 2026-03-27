@@ -2,10 +2,10 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 const clients = [
-  "Four Seasons", "Aman Resorts", "Ritz-Carlton", "Mandarin Oriental",
-  "Belmond", "Rosewood", "Peninsula", "Six Senses",
-  "One&Only", "Bulgari Hotels", "Park Hyatt", "St. Regis",
-  "Emirates", "Turkish Airlines", "Qatar Airways", "Lufthansa",
+  "Turkish Airlines", "Pegasus", "Hilton", "Marriott",
+  "Hyatt", "Radisson", "IHG", "Accor",
+  "Mercedes-Benz", "BMW", "Siemens", "Bosch",
+  "TÜYAP", "CNR Expo", "IFM", "Lütfi Kırdar",
 ];
 
 const ClientsSection = () => {
@@ -13,7 +13,7 @@ const ClientsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="destinations" className="relative py-32 md:py-48" ref={ref}>
+    <section id="catering" className="relative py-32 md:py-48" ref={ref}>
       <div className="px-8 md:px-12 max-w-7xl mx-auto mb-16">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
