@@ -1,4 +1,4 @@
-import gratusLogo from "@/assets/gratus-logo.png";
+import GratusLogo from "@/components/GratusLogo";
 
 const FooterSection = () => {
   return (
@@ -7,7 +7,9 @@ const FooterSection = () => {
         <div className="grid md:grid-cols-3 gap-16 md:gap-8">
           {/* Brand */}
           <div>
-            <img src={gratusLogo} alt="Gratus Travel" className="h-14 w-auto mb-6" />
+            <div className="mb-6">
+              <GratusLogo size="lg" />
+            </div>
             <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-xs">
               Hayalleri rotaya, rotaları anlara, anları unutulmaz deneyimlere dönüştürüyoruz.
             </p>
