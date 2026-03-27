@@ -5,17 +5,26 @@ import ServicesSection from "@/components/ServicesSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ClientsSection from "@/components/ClientsSection";
 import FooterSection from "@/components/FooterSection";
+import ScrollSection from "@/components/ScrollSection";
+
+const sections = [
+  { id: undefined, Component: HeroSlider },
+  { id: "about", Component: AboutSection },
+  { id: "services", Component: ServicesSection },
+  { id: "projects", Component: ProjectsSection },
+  { id: "catering", Component: ClientsSection },
+  { id: "contact", Component: FooterSection },
+];
 
 const Index = () => {
   return (
     <div className="bg-background min-h-screen">
       <Navbar />
-      <HeroSlider />
-      <AboutSection />
-      <ServicesSection />
-      <ProjectsSection />
-      <ClientsSection />
-      <FooterSection />
+      {sections.map((section, i) => (
+        <ScrollSection key={i} index={i} total={sections.length} id={section.id}>
+          <section.Component />
+        </ScrollSection>
+      ))}
     </div>
   );
 };
