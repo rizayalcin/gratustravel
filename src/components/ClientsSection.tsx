@@ -29,7 +29,7 @@ const ClientsSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-body text-muted-foreground max-w-lg"
         >
-          Dünyanın en prestijli otel zincirleri, havayolları ve deneyim sağlayıcılarıyla çalışıyoruz.
+          Lider oteller, havayolları, kurumsal firmalar ve fuar merkezleriyle güçlü iş birliklerimizle hizmet veriyoruz.
         </motion.p>
       </div>
 
@@ -54,7 +54,7 @@ const ClientsSection = () => {
         transition={{ delay: 0.4 }}
         className="px-8 md:px-12 max-w-7xl mx-auto mt-16 flex flex-wrap gap-4"
       >
-        {["Lüks Oteller", "Havayolları", "Yat & Tekne", "Özel Jet", "Wellness & Spa"].map((cat) => (
+        {["Oteller & Konaklama", "Havayolları", "Fuar & Kongre Merkezleri", "Catering", "Kurumsal Firmalar"].map((cat) => (
           <span key={cat} className="font-body text-xs tracking-widest uppercase text-muted-foreground border border-border px-4 py-2">
             {cat}
           </span>
