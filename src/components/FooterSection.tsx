@@ -1,3 +1,5 @@
+import gratusLogo from "@/assets/gratus-logo.png";
+
 const FooterSection = () => {
   return (
     <footer id="contact" className="relative py-24 md:py-32 px-8 md:px-12 border-t border-border">
@@ -5,9 +7,7 @@ const FooterSection = () => {
         <div className="grid md:grid-cols-3 gap-16 md:gap-8">
           {/* Brand */}
           <div>
-            <h3 className="font-display text-3xl md:text-4xl font-semibold text-foreground tracking-wider mb-6">
-              GRATUS
-            </h3>
+            <img src={gratusLogo} alt="Gratus Travel" className="h-14 w-auto mb-6" />
             <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-xs">
               Hayalleri rotaya, rotaları anlara, anları unutulmaz deneyimlere dönüştürüyoruz.
             </p>
