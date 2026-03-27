@@ -13,7 +13,7 @@ const ClientsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="catering" className="relative py-32 md:py-48" ref={ref}>
+    <div className="relative py-32 md:py-48 min-h-screen" ref={ref}>
       <div className="px-8 md:px-12 max-w-7xl mx-auto mb-16">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -60,7 +60,7 @@ const ClientsSection = () => {
           </span>
         ))}
       </motion.div>
-    </section>
+    </div>
   );
 };
 
