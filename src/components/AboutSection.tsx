@@ -16,10 +16,10 @@ const AboutSection = () => {
           className="mb-16"
         >
           <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-light leading-tight text-foreground">
-            Biz bir lüks seyahat
+            Kurumsal turizm, catering
           </h2>
           <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-light leading-tight text-foreground">
-            & deneyim ajansıyız
+            & fuar çözümleri ajansıyız
           </h2>
         </motion.div>
 
@@ -29,7 +29,7 @@ const AboutSection = () => {
           transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="font-body text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
         >
-          Hayalleri rotaya, rotaları anlara, anları unutulmaz deneyimlere dönüştürüyoruz.
+          Kurumsal seyahatten catering'e, fuar standından kongre organizasyonuna — her detayı titizlikle planlıyor, unutulmaz deneyimlere dönüştürüyoruz.
         </motion.p>
 
         {/* Image grid like Shadow */}
