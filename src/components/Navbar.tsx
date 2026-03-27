@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import gratusIcon from "@/assets/gratus-icon.png";
+import GratusLogo from "@/components/GratusLogo";
 
 const navItems = [
   { label: "Hakkımızda", href: "#about" },
@@ -16,9 +16,8 @@ const Navbar = () => {
   return (
     <>
       <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 md:px-12 py-6">
-        <a href="#" className="flex items-center gap-3 z-50">
-          <img src={gratusIcon} alt="Gratus" className="h-8 md:h-10 w-auto" />
-          <span className="font-display text-foreground text-2xl md:text-3xl font-semibold tracking-wider">GRATUS</span>
+        <a href="#" className="z-50">
+          <GratusLogo size="md" />
         </a>
 
         <button
