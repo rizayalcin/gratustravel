@@ -2,7 +2,7 @@ import GratusLogo from "@/components/GratusLogo";
 
 const FooterSection = () => {
   return (
-    <footer id="contact" className="relative py-24 md:py-32 px-8 md:px-12 border-t border-border">
+    <footer className="relative py-24 md:py-32 px-8 md:px-12 border-t border-border min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-16 md:gap-8">
           {/* Brand */}
