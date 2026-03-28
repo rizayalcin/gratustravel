@@ -8,6 +8,7 @@ import imgFair from "@/assets/service-fair.jpg";
 import imgCongress from "@/assets/service-congress.jpg";
 import imgVip from "@/assets/service-vip.jpg";
 import imgDmc from "@/assets/service-dmc.jpg";
+import imgAv from "@/assets/service-avmanagement.jpg";
 
 const services = [
   {
