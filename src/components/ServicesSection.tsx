@@ -82,8 +82,8 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <div className="relative py-32 md:py-48 px-8 md:px-12 min-h-screen" ref={sectionRef}>
-      <div className="max-w-7xl mx-auto">
+    <div className="relative py-32 md:py-48 px-0 min-h-screen" ref={sectionRef}>
+      <div className="w-full">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
