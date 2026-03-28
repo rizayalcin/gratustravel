@@ -10,7 +10,7 @@ const sections = [
   { id: undefined, Component: HeroSlider },
   { id: "about", Component: AboutSection },
   { id: "services", Component: ServicesSection },
-  { id: "catering", Component: ClientsSection },
+  { id: "partners", Component: ClientsSection },
   { id: "contact", Component: FooterSection },
 ];
 

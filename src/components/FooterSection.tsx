@@ -11,14 +11,14 @@ const FooterSection = () => {
               <img src={gratusLogo} alt="Gratus Travel" className="h-28 md:h-36 w-auto" />
             </div>
             <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Hayalleri rotaya, rotaları anlara, anları unutulmaz deneyimlere dönüştürüyoruz.
+              We turn dreams into journeys, journeys into moments, and moments into unforgettable experiences.
             </p>
           </div>
 
           {/* Navigation */}
           <div className="flex flex-col gap-4">
-            <span className="font-body text-xs text-primary tracking-widest uppercase mb-2">Navigasyon</span>
-            {["Hakkımızda", "Hizmetler", "Projeler", "Catering", "Fuar Standı", "İletişim"].map((item) => (
+            <span className="font-body text-xs text-primary tracking-widest uppercase mb-2">Navigation</span>
+            {["About", "Services", "Partners", "Contact"].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
                 {item}
               </a>
@@ -27,7 +27,7 @@ const FooterSection = () => {
 
           {/* Contact */}
           <div className="flex flex-col gap-4">
-            <span className="font-body text-xs text-primary tracking-widest uppercase mb-2">İletişim</span>
+            <span className="font-body text-xs text-primary tracking-widest uppercase mb-2">Contact</span>
             <a href="mailto:hello@gratustravel.com" className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">
               hello@gratustravel.com
             </a>
@@ -41,8 +41,8 @@ const FooterSection = () => {
         </div>
 
         <div className="mt-20 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <span className="font-body text-xs text-muted-foreground">©2025 Gratus Travel. Tüm hakları saklıdır.</span>
-          <span className="font-body text-xs text-muted-foreground">Lüks seyahat deneyimleri</span>
+          <span className="font-body text-xs text-muted-foreground">©2025 Gratus Travel. All rights reserved.</span>
+          <span className="font-body text-xs text-muted-foreground">Premium travel experiences</span>
         </div>
       </div>
     </footer>

@@ -12,45 +12,52 @@ import imgDmc from "@/assets/service-dmc.jpg";
 const services = [
   {
     num: "01",
-    title: "Kurumsal Turizm & Organizasyon",
-    description: "Şirketler ve kurumlar için uçtan uca seyahat ve organizasyon çözümleri sunuyoruz. MICE hizmetlerinden VIP transferlere, konaklama planlamasından uçak biletlemeye kadar tüm süreçleri profesyonelce yönetiyoruz.",
-    items: ["MICE Hizmetleri (Toplantı, Teşvik, Kongre, Fuar)", "Konaklama & Otel Rezervasyonu", "Uçak Bileti & Charter", "VIP Transfer & Limuzin", "VIP Karşılama & Protokol", "Organizasyon & Etkinlik Yönetimi", "Incentive & Motivasyon Turları"],
+    title: "Corporate Events",
+    description: "We design and execute large-scale corporate events that leave a lasting impression. From gala dinners and product launches to award ceremonies and brand activations, every detail is meticulously planned to reflect your brand's identity.",
+    items: ["Gala Dinners & Award Ceremonies", "Product Launches & Brand Activations", "Annual Meetings & Celebrations", "Team Building Events", "Corporate Retreats", "End-to-End Event Management"],
     image: imgCorporate,
   },
   {
     num: "02",
-    title: "Catering Hizmetleri",
-    description: "Kurumsal etkinlikler, toplantılar, lansman partileri, gala geceleri ve özel davetler için premium catering çözümleri. Dünya mutfağından seçkin menüler ve profesyonel servis.",
-    items: ["Kurumsal Toplantı Catering", "Gala & Davet Organizasyonu", "Kokteyl & Resepsiyon", "Açık Büfe & Fine Dining", "Özel Menü Tasarımı", "Servis Personeli & Ekipman"],
-    image: imgCatering,
-  },
-  {
-    num: "03",
-    title: "Fuar Standı Tasarım & Kurulum",
-    description: "Ulusal ve uluslararası fuarlar için etkileyici stand tasarımı, üretim ve kurulum hizmetleri. Markanızı en iyi şekilde temsil eden yaratıcı ve fonksiyonel stand çözümleri.",
-    items: ["Stand Tasarım & 3D Modelleme", "Stand Üretim & Kurulum", "Grafik & Görsel Tasarım", "Aydınlatma & AV Sistemleri", "Lojistik & Nakliye", "Fuar Süresince Teknik Destek"],
-    image: imgFair,
-  },
-  {
-    num: "04",
-    title: "Kongre & Toplantı Organizasyonu",
-    description: "Ulusal ve uluslararası kongre, seminer, sempozyum ve kurumsal toplantılar için eksiksiz organizasyon hizmetleri.",
-    items: ["Mekan Seçimi & Rezervasyon", "Teknik Altyapı & Sahne", "Simultane Tercüme", "Kayıt & Akreditasyon Sistemi", "Sosyal Program Planlaması", "Sponsorluk Yönetimi"],
+    title: "Meetings & Incentive",
+    description: "We specialize in MICE services — creating impactful meetings, incentive programs, conferences, and exhibitions. Our team handles every aspect from venue selection and logistics to attendee management and on-site coordination.",
+    items: ["Conferences & Summits", "Incentive Travel Programs", "Board Meetings & Seminars", "Registration & Accreditation Systems", "Simultaneous Interpretation", "Sponsorship Management"],
     image: imgCongress,
   },
   {
-    num: "05",
-    title: "VIP & Özel Hizmetler",
-    description: "Üst düzey yöneticiler, delegasyonlar ve özel misafirler için kişiye özel lüks seyahat ve hizmet çözümleri.",
-    items: ["Özel Jet & Helikopter", "Lüks Araç Kiralama", "Kişisel Concierge", "Güvenlik & Koruma", "Özel Rehberlik", "Protokol Hizmetleri"],
+    num: "03",
+    title: "Private Travels",
+    description: "Bespoke luxury travel experiences for executives, delegations, and private guests. We craft personalized itineraries with premium accommodation, private transfers, and exclusive access to extraordinary destinations.",
+    items: ["Private Jet & Helicopter Charters", "Luxury Accommodation", "VIP Airport Services & Protocol", "Personal Concierge", "Tailor-Made Itineraries", "Security & Close Protection"],
     image: imgVip,
   },
   {
-    num: "06",
-    title: "Destinasyon Yönetimi (DMC)",
-    description: "Türkiye ve dünya genelinde destinasyon yönetim hizmetleri. Gruplar ve bireysel misafirler için yerel deneyimler ve lojistik koordinasyon.",
-    items: ["Şehir Turları & Kültür Gezileri", "Gastronomi Deneyimleri", "Team Building Aktiviteleri", "Gala & Özel Akşam Yemekleri", "Yerel Deneyim Tasarımı", "Lojistik Koordinasyon"],
+    num: "04",
+    title: "Catering",
+    description: "Premium catering solutions for corporate events, meetings, launch parties, gala nights, and private receptions. We offer world-class cuisine, bespoke menu design, and impeccable service tailored to every occasion.",
+    items: ["Corporate Event Catering", "Cocktail & Reception Services", "Fine Dining & Buffet", "Custom Menu Design", "Service Staff & Equipment", "Gala Dinner Catering"],
+    image: imgCatering,
+  },
+  {
+    num: "05",
+    title: "A/V Management",
+    description: "Full-service audiovisual management for events of any scale. We provide cutting-edge sound, lighting, LED displays, live streaming, and stage design to ensure your event delivers maximum impact.",
+    items: ["Sound & PA Systems", "Stage & Lighting Design", "LED Walls & Projection", "Live Streaming & Recording", "Technical Direction", "On-Site Technical Support"],
     image: imgDmc,
+  },
+  {
+    num: "06",
+    title: "Expo & Fair Stands",
+    description: "Eye-catching exhibition stand design, production, and installation for national and international trade fairs. We create innovative, functional spaces that elevate your brand presence on the show floor.",
+    items: ["Stand Design & 3D Modeling", "Production & Installation", "Graphic & Visual Design", "Lighting & AV Integration", "Logistics & Transportation", "On-Site Technical Support"],
+    image: imgFair,
+  },
+  {
+    num: "07",
+    title: "Creative",
+    description: "Our creative studio delivers compelling visual identities, branded content, and campaign concepts that tell your story. From digital assets to physical installations, we bring bold ideas to life.",
+    items: ["Brand Identity & Strategy", "Campaign Concept & Design", "Motion Graphics & Video", "Social Media Content", "Print & Digital Design", "Experiential Installations"],
+    image: imgCorporate,
   },
 ];
 
@@ -60,7 +67,6 @@ const ServicesSection = () => {
   const isInView = useInView(sectionRef, { once: true, margin: "-50px" });
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Scroll-driven accordion: open when item enters viewport
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
 
@@ -90,7 +96,7 @@ const ServicesSection = () => {
           transition={{ duration: 0.8 }}
           className="font-display text-5xl md:text-7xl font-light text-foreground mb-20 px-8 md:px-12"
         >
-          Hizmetler
+          Services
         </motion.h2>
 
         <div className="border-t border-border">
@@ -130,7 +136,6 @@ const ServicesSection = () => {
                     className="overflow-hidden"
                   >
                     <div className="pb-8">
-                      {/* Full-width image */}
                       <div className="w-full aspect-[21/9] max-h-[250px] overflow-hidden mb-8">
                         <img
                           src={service.image}

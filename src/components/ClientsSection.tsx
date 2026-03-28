@@ -21,7 +21,7 @@ const ClientsSection = () => {
           transition={{ duration: 0.8 }}
           className="font-display text-5xl md:text-7xl font-light text-foreground mb-8"
         >
-          Partnerler
+          Partners
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -29,11 +29,10 @@ const ClientsSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-body text-muted-foreground max-w-lg"
         >
-          Lider oteller, havayolları, kurumsal firmalar ve fuar merkezleriyle güçlü iş birliklerimizle hizmet veriyoruz.
+          We collaborate with leading hotels, airlines, corporations, and exhibition centers to deliver exceptional experiences.
         </motion.p>
       </div>
 
-      {/* Marquee logo scroller */}
       <div className="overflow-hidden border-t border-b border-border py-12">
         <div className="animate-marquee flex whitespace-nowrap">
           {[...clients, ...clients].map((client, i) => (
@@ -47,14 +46,13 @@ const ClientsSection = () => {
         </div>
       </div>
 
-      {/* Category tags */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ delay: 0.4 }}
         className="px-8 md:px-12 max-w-7xl mx-auto mt-16 flex flex-wrap gap-4"
       >
-        {["Oteller & Konaklama", "Havayolları", "Fuar & Kongre Merkezleri", "Catering", "Kurumsal Firmalar"].map((cat) => (
+        {["Hotels & Accommodation", "Airlines", "Expo & Congress Centers", "Catering", "Corporate Clients"].map((cat) => (
           <span key={cat} className="font-body text-xs tracking-widest uppercase text-muted-foreground border border-border px-4 py-2">
             {cat}
           </span>

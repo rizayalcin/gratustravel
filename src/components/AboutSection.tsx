@@ -14,7 +14,6 @@ const AboutSection = () => {
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 min-h-screen">
         {/* Left: Text content */}
         <div className="flex flex-col justify-center px-8 md:px-12 lg:px-20 py-32">
-          {/* Large watermark text */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 0.03 } : {}}
@@ -38,11 +37,11 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] text-foreground mb-6"
           >
-            Kurumsal turizm, catering
+            Corporate events, catering
             <br />
-            <span className="text-primary">&</span> fuar çözümleri
+            <span className="text-primary">&</span> expo solutions
             <br />
-            ajansıyız
+            agency
           </motion.h2>
 
           <motion.p
@@ -51,13 +50,13 @@ const AboutSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="font-body text-base md:text-lg text-muted-foreground max-w-lg leading-relaxed mt-4"
           >
-            <span className="font-semibold text-foreground">Fikirleri</span> deneyimlere,{" "}
-            <span className="font-semibold text-foreground">deneyimleri</span> anılara,{" "}
-            anıları <span className="font-semibold text-foreground">başarı hikayelerine</span> dönüştürüyoruz.
+            We turn <span className="font-semibold text-foreground">ideas</span> into experiences,{" "}
+            <span className="font-semibold text-foreground">experiences</span> into memories,{" "}
+            and memories into <span className="font-semibold text-foreground">success stories</span>.
           </motion.p>
         </div>
 
-        {/* Right: Overlapping image collage like Shadow */}
+        {/* Right: Overlapping image collage */}
         <div className="relative hidden lg:flex items-center justify-center py-20">
           <motion.div
             initial={{ opacity: 0, y: 60 }}
@@ -65,15 +64,12 @@ const AboutSection = () => {
             transition={{ duration: 1, delay: 0.2 }}
             className="relative w-full h-[80vh] max-w-xl"
           >
-            {/* Image 1 - top right */}
             <div className="absolute top-0 right-0 w-[65%] aspect-[4/3] overflow-hidden z-10">
               <img src={aboutImg1} alt="Corporate event" className="w-full h-full object-cover" loading="lazy" width={600} height={450} />
             </div>
-            {/* Image 2 - center overlapping */}
             <div className="absolute top-[25%] left-[5%] w-[60%] aspect-[3/4] overflow-hidden z-20">
               <img src={aboutImg2} alt="Catering service" className="w-full h-full object-cover" loading="lazy" width={450} height={600} />
             </div>
-            {/* Image 3 - bottom right */}
             <div className="absolute bottom-[5%] right-[5%] w-[55%] aspect-[4/3] overflow-hidden z-10">
               <img src={aboutImg3} alt="Fair stand" className="w-full h-full object-cover" loading="lazy" width={600} height={450} />
             </div>
@@ -81,7 +77,6 @@ const AboutSection = () => {
         </div>
       </div>
 
-      {/* Scroll circle indicator bottom right */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
