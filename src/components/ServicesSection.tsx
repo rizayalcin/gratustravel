@@ -9,6 +9,7 @@ import imgCongress from "@/assets/service-congress.jpg";
 import imgVip from "@/assets/service-vip.jpg";
 import imgDmc from "@/assets/service-dmc.jpg";
 import imgAv from "@/assets/service-avmanagement.jpg";
+import imgCreative from "@/assets/service-creative.jpg";
 
 const services = [
   {
@@ -58,7 +59,7 @@ const services = [
     title: "Creative",
     description: "Our creative studio delivers compelling visual identities, branded content, and campaign concepts that tell your story. From digital assets to physical installations, we bring bold ideas to life.",
     items: ["Brand Identity & Strategy", "Campaign Concept & Design", "Motion Graphics & Video", "Social Media Content", "Print & Digital Design", "Experiential Installations"],
-    image: imgCorporate,
+    image: imgCreative,
   },
 ];
 
