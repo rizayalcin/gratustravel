@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import HeroSlider from "@/components/HeroSlider";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
-import ProjectsSection from "@/components/ProjectsSection";
 import ClientsSection from "@/components/ClientsSection";
 import FooterSection from "@/components/FooterSection";
 import ScrollSection from "@/components/ScrollSection";
@@ -11,7 +10,6 @@ const sections = [
   { id: undefined, Component: HeroSlider },
   { id: "about", Component: AboutSection },
   { id: "services", Component: ServicesSection },
-  { id: "projects", Component: ProjectsSection },
   { id: "catering", Component: ClientsSection },
   { id: "contact", Component: FooterSection },
 ];
