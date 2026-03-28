@@ -141,7 +141,7 @@ const ServicesSection = () => {
                           height={800}
                         />
                       </div>
-                      <div className="pl-12 md:pl-28 grid md:grid-cols-2 gap-8">
+                      <div className="px-8 md:px-12 pl-12 md:pl-28 grid md:grid-cols-2 gap-8">
                         <p className="font-body text-muted-foreground leading-relaxed">{service.description}</p>
                         <ul className="space-y-2">
                           {service.items.map((item) => (
