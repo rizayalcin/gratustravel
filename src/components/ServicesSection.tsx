@@ -105,7 +105,7 @@ const ServicesSection = () => {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full py-8 flex items-center justify-between group"
+                className="w-full py-8 px-8 md:px-12 flex items-center justify-between group"
               >
                 <div className="flex items-center gap-8 md:gap-16">
                   <span className="font-body text-sm text-primary tracking-widest">{service.num}</span>
