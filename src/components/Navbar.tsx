@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import gratusLogo from "@/assets/gratus-logo.png";
 
@@ -11,16 +11,35 @@ const navItems = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [logoReady, setLogoReady] = useState(false);
+
+  useEffect(() => {
+    const handler = () => setLogoReady(true);
+    window.addEventListener("hero-logo-done", handler);
+    return () => window.removeEventListener("hero-logo-done", handler);
+  }, []);
 
   return (
     <>
       <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 md:px-12 py-6">
-        <a href="#" className="z-50 flex items-center gap-4">
-          <img src={gratusLogo} alt="Gratus Travel" className="h-12 md:h-14 w-auto brightness-0 invert opacity-90" />
-          <div className="flex flex-col leading-none">
+        <a href="#" className="z-50 flex items-center gap-4" data-header-logo>
+          <motion.img
+            src={gratusLogo}
+            alt="Gratus Travel"
+            className="h-12 md:h-14 w-auto brightness-0 invert opacity-90"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={logoReady ? { opacity: 0.9, scale: 1 } : { opacity: 0, scale: 0.5 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+          />
+          <motion.div
+            className="flex flex-col leading-none"
+            initial={{ opacity: 0, x: -10 }}
+            animate={logoReady ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+            transition={{ duration: 0.4, delay: 0.15, ease: "easeOut" }}
+          >
             <span className="text-2xl md:text-3xl font-bold text-foreground tracking-[0.2em]" style={{ fontFamily: "'Playfair Display', serif" }}>GRATUS</span>
             <span className="text-[0.65rem] md:text-sm font-light text-primary tracking-[0.4em] uppercase self-end" style={{ fontFamily: "'Raleway', sans-serif" }}>Travel</span>
-          </div>
+          </motion.div>
         </a>
 
         <button
