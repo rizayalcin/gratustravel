@@ -15,11 +15,11 @@ const Navbar = () => {
   return (
     <>
       <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 md:px-12 py-6">
-        <a href="#" className="z-50 flex items-center gap-3">
-          <img src={gratusLogo} alt="Gratus Travel" className="h-8 md:h-10 w-auto" />
+        <a href="#" className="z-50 flex items-center gap-4">
+          <img src={gratusLogo} alt="Gratus Travel" className="h-12 md:h-14 w-auto brightness-0 invert opacity-90" />
           <div className="flex flex-col leading-none">
-            <span className="font-display text-lg md:text-xl font-semibold text-foreground tracking-[0.15em]">GRATUS</span>
-            <span className="font-body text-[0.6rem] md:text-xs font-light text-primary tracking-[0.35em] uppercase self-end">Travel</span>
+            <span className="text-2xl md:text-3xl font-bold text-foreground tracking-[0.2em]" style={{ fontFamily: "'Playfair Display', serif" }}>GRATUS</span>
+            <span className="text-[0.65rem] md:text-sm font-light text-primary tracking-[0.4em] uppercase self-end" style={{ fontFamily: "'Raleway', sans-serif" }}>Travel</span>
           </div>
         </a>
 
