@@ -15,8 +15,9 @@ const Navbar = () => {
   return (
     <>
       <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 md:px-12 py-6">
-        <a href="#" className="z-50">
-          <img src={gratusLogo} alt="Gratus Travel" className="h-16 md:h-20 w-auto" />
+        <a href="#" className="z-50 flex items-center gap-3">
+          <img src={gratusLogo} alt="Gratus Travel" className="h-8 md:h-10 w-auto" />
+          <span className="font-display text-lg md:text-xl font-light text-foreground tracking-wide">Gratus Travel</span>
         </a>
 
         <button
