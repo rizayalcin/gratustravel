@@ -31,7 +31,7 @@ const FooterSection = () => {
             <a href="mailto:hello@gratustravel.com" className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">
               hello@gratustravel.com
             </a>
-            <span className="font-body text-sm text-muted-foreground">+90 212 555 00 00</span>
+            
             <span className="font-body text-sm text-muted-foreground">Istanbul, Turkey</span>
             <div className="flex gap-6 mt-4">
               <a href="#" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors tracking-widest uppercase">Instagram</a>
