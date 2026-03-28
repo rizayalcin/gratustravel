@@ -34,16 +34,16 @@ const HeroSlider = () => {
               src={gratusLogo}
               alt="Gratus Travel"
               className="w-[60vw] md:w-[40vw] max-w-[600px] brightness-0 invert"
-              initial={{ scale: 0.3, opacity: 0 }}
+              initial={{ scale: 2.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 2.5, opacity: 0 }}
+              exit={{ scale: 0, opacity: 0 }}
               transition={{
-                scale: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
-                opacity: { duration: 0.6, ease: "easeOut" },
+                scale: { duration: 1, ease: [0.16, 1, 0.3, 1] },
+                opacity: { duration: 0.5, ease: "easeOut" },
               }}
               onAnimationComplete={(def) => {
                 if ((def as { scale: number }).scale === 1) {
-                  setTimeout(() => setShowLogo(false), 800);
+                  setTimeout(() => setShowLogo(false), 600);
                 }
               }}
             />
