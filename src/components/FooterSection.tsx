@@ -62,6 +62,10 @@ const FooterSection = () => {
                 {item}
               </a>
             ))}
+            <div className="flex gap-6 mt-4">
+              <a href="#" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors tracking-widest uppercase">Instagram</a>
+              <a href="#" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors tracking-widest uppercase">LinkedIn</a>
+            </div>
           </div>
 
           {/* Contact Form */}
@@ -119,10 +123,6 @@ const FooterSection = () => {
                 {loading ? "Sending..." : "Send Message"}
               </Button>
             </form>
-            <div className="flex gap-6 mt-4">
-              <a href="#" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors tracking-widest uppercase">Instagram</a>
-              <a href="#" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors tracking-widest uppercase">LinkedIn</a>
-            </div>
           </div>
         </div>
 
