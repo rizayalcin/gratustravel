@@ -8,6 +8,7 @@ import imgFair from "@/assets/service-fair.jpg";
 import imgCongress from "@/assets/service-congress.jpg";
 import imgVip from "@/assets/service-vip.jpg";
 import imgDmc from "@/assets/service-dmc.jpg";
+import imgAv from "@/assets/service-avmanagement.jpg";
 
 const services = [
   {
@@ -43,7 +44,7 @@ const services = [
     title: "A/V Management",
     description: "Full-service audiovisual management for events of any scale. We provide cutting-edge sound, lighting, LED displays, live streaming, and stage design to ensure your event delivers maximum impact.",
     items: ["Sound & PA Systems", "Stage & Lighting Design", "LED Walls & Projection", "Live Streaming & Recording", "Technical Direction", "On-Site Technical Support"],
-    image: imgDmc,
+    image: imgAv,
   },
   {
     num: "06",
