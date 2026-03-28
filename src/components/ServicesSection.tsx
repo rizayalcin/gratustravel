@@ -88,7 +88,7 @@ const ServicesSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="font-display text-5xl md:text-7xl font-light text-foreground mb-20"
+          className="font-display text-5xl md:text-7xl font-light text-foreground mb-20 px-8 md:px-12"
         >
           Hizmetler
         </motion.h2>
