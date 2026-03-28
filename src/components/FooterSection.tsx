@@ -76,23 +76,25 @@ const FooterSection = () => {
                 className="bg-transparent border-border font-body text-sm"
                 required
               />
-              <Input
-                name="email"
-                type="email"
-                placeholder="Email *"
-                value={form.email}
-                onChange={handleChange}
-                className="bg-transparent border-border font-body text-sm"
-                required
-              />
-              <Input
-                name="phone"
-                type="tel"
-                placeholder="Phone"
-                value={form.phone}
-                onChange={handleChange}
-                className="bg-transparent border-border font-body text-sm"
-              />
+              <div className="grid grid-cols-2 gap-3">
+                <Input
+                  name="email"
+                  type="email"
+                  placeholder="Email *"
+                  value={form.email}
+                  onChange={handleChange}
+                  className="bg-transparent border-border font-body text-sm"
+                  required
+                />
+                <Input
+                  name="phone"
+                  type="tel"
+                  placeholder="Phone"
+                  value={form.phone}
+                  onChange={handleChange}
+                  className="bg-transparent border-border font-body text-sm"
+                />
+              </div>
               <Input
                 name="subject"
                 placeholder="Subject *"
