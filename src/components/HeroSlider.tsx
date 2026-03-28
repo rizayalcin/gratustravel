@@ -1,10 +1,19 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import gratusLogo from "@/assets/gratus-logo.png";
 
 const HeroSlider = () => {
-  const [phase, setPhase] = useState<"zoom-in" | "fly-to-header" | "done">("zoom-in");
+  const [videoReady, setVideoReady] = useState(false);
+  const [phase, setPhase] = useState<"waiting" | "zoom-in" | "fly-to-header" | "done">("waiting");
   const logoRef = useRef<HTMLImageElement>(null);
+
+  const handleIframeLoad = useCallback(() => {
+    // Give a small extra delay for the video to actually start rendering
+    setTimeout(() => {
+      setVideoReady(true);
+      setPhase("zoom-in");
+    }, 500);
+  }, []);
 
   useEffect(() => {
     if (phase === "done") {
@@ -12,7 +21,6 @@ const HeroSlider = () => {
     }
   }, [phase]);
 
-  // Calculate target position (header logo area)
   const getHeaderTarget = () => {
     const headerLogo = document.querySelector("[data-header-logo]");
     if (headerLogo) {
@@ -28,12 +36,22 @@ const HeroSlider = () => {
   const [headerPos, setHeaderPos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    // Pre-calculate header position
     const timer = setTimeout(() => {
       setHeaderPos(getHeaderTarget());
     }, 100);
     return () => clearTimeout(timer);
   }, []);
+
+  // Fallback: if iframe doesn't fire onload within 4s, start anyway
+  useEffect(() => {
+    const fallback = setTimeout(() => {
+      if (!videoReady) {
+        setVideoReady(true);
+        setPhase("zoom-in");
+      }
+    }, 4000);
+    return () => clearTimeout(fallback);
+  }, [videoReady]);
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
@@ -46,12 +64,25 @@ const HeroSlider = () => {
           style={{ border: 0, pointerEvents: "none" }}
           allow="autoplay; encrypted-media"
           allowFullScreen={false}
+          onLoad={handleIframeLoad}
         />
         <div className="absolute inset-0 bg-background/20" />
       </div>
 
+      {/* Loading state - before video ready */}
+      {!videoReady && (
+        <div className="absolute inset-0 z-20 bg-background flex items-center justify-center">
+          <img
+            src={gratusLogo}
+            alt="Gratus Travel"
+            className="animate-pulse"
+            style={{ width: "min(40vw, 300px)" }}
+          />
+        </div>
+      )}
+
       {/* Giant logo → flies to header */}
-      {phase !== "done" && (
+      {videoReady && phase !== "done" && (
         <motion.div
           className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none"
         >
@@ -59,7 +90,6 @@ const HeroSlider = () => {
             ref={logoRef}
             src={gratusLogo}
             alt="Gratus Travel"
-            className=""
             initial={{ scale: 3, opacity: 0 }}
             animate={
               phase === "zoom-in"
