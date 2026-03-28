@@ -5,9 +5,7 @@ import GratusLogo from "@/components/GratusLogo";
 const navItems = [
   { label: "Hakkımızda", href: "#about" },
   { label: "Hizmetler", href: "#services" },
-  { label: "Projeler", href: "#projects" },
   { label: "Catering", href: "#catering" },
-  { label: "Fuar Standı", href: "#fuar" },
   { label: "İletişim", href: "#contact" },
 ];
 
