@@ -122,61 +122,6 @@ const FooterSection = () => {
               <a href="#" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors tracking-widest uppercase">LinkedIn</a>
             </div>
           </div>
-
-          <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-6 max-w-4xl">
-            <Input
-              name="name"
-              placeholder="Full Name *"
-              value={form.name}
-              onChange={handleChange}
-              className="bg-transparent border-border font-body text-sm"
-              required
-            />
-            <Input
-              name="email"
-              type="email"
-              placeholder="Email *"
-              value={form.email}
-              onChange={handleChange}
-              className="bg-transparent border-border font-body text-sm"
-              required
-            />
-            <Input
-              name="phone"
-              type="tel"
-              placeholder="Phone"
-              value={form.phone}
-              onChange={handleChange}
-              className="bg-transparent border-border font-body text-sm"
-            />
-            <Input
-              name="subject"
-              placeholder="Subject *"
-              value={form.subject}
-              onChange={handleChange}
-              className="bg-transparent border-border font-body text-sm"
-              required
-            />
-            <div className="md:col-span-2">
-              <Textarea
-                name="message"
-                placeholder="Message *"
-                value={form.message}
-                onChange={handleChange}
-                className="bg-transparent border-border font-body text-sm min-h-[120px]"
-                required
-              />
-            </div>
-            <div className="md:col-span-2">
-              <Button
-                type="submit"
-                disabled={loading}
-                className="font-body text-xs tracking-widest uppercase px-10 py-6"
-              >
-                {loading ? "Sending..." : "Send Message"}
-              </Button>
-            </div>
-          </form>
         </div>
 
         <div className="mt-20 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
