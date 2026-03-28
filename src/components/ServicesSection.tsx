@@ -131,7 +131,7 @@ const ServicesSection = () => {
                   >
                     <div className="pb-8">
                       {/* Full-width image */}
-                      <div className="w-full aspect-[21/9] overflow-hidden mb-8">
+                      <div className="w-full aspect-[21/9] max-h-[250px] overflow-hidden mb-8">
                         <img
                           src={service.image}
                           alt={service.title}
