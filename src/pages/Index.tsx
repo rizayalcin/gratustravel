@@ -16,6 +16,10 @@ const sections = [
 ];
 
 const Index = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="bg-background min-h-screen">
       <Navbar />
