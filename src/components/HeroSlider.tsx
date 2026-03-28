@@ -59,7 +59,7 @@ const HeroSlider = () => {
             ref={logoRef}
             src={gratusLogo}
             alt="Gratus Travel"
-            className="brightness-0 invert"
+            className=""
             initial={{ scale: 3, opacity: 0 }}
             animate={
               phase === "zoom-in"
