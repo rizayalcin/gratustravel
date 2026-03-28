@@ -44,7 +44,7 @@ const services = [
     title: "A/V Management",
     description: "Full-service audiovisual management for events of any scale. We provide cutting-edge sound, lighting, LED displays, live streaming, and stage design to ensure your event delivers maximum impact.",
     items: ["Sound & PA Systems", "Stage & Lighting Design", "LED Walls & Projection", "Live Streaming & Recording", "Technical Direction", "On-Site Technical Support"],
-    image: imgDmc,
+    image: imgAv,
   },
   {
     num: "06",
