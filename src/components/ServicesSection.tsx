@@ -82,13 +82,13 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <div className="relative py-32 md:py-48 px-8 md:px-12 min-h-screen" ref={sectionRef}>
-      <div className="max-w-7xl mx-auto">
+    <div className="relative py-32 md:py-48 px-0 min-h-screen" ref={sectionRef}>
+      <div className="w-full">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="font-display text-5xl md:text-7xl font-light text-foreground mb-20"
+          className="font-display text-5xl md:text-7xl font-light text-foreground mb-20 px-8 md:px-12"
         >
           Hizmetler
         </motion.h2>
@@ -105,7 +105,7 @@ const ServicesSection = () => {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full py-8 flex items-center justify-between group"
+                className="w-full py-8 px-8 md:px-12 flex items-center justify-between group"
               >
                 <div className="flex items-center gap-8 md:gap-16">
                   <span className="font-body text-sm text-primary tracking-widest">{service.num}</span>
@@ -141,7 +141,7 @@ const ServicesSection = () => {
                           height={800}
                         />
                       </div>
-                      <div className="pl-12 md:pl-28 grid md:grid-cols-2 gap-8">
+                      <div className="px-8 md:px-12 pl-12 md:pl-28 grid md:grid-cols-2 gap-8">
                         <p className="font-body text-muted-foreground leading-relaxed">{service.description}</p>
                         <ul className="space-y-2">
                           {service.items.map((item) => (
