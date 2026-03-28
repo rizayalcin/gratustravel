@@ -8,7 +8,7 @@ const FooterSection = () => {
           {/* Brand */}
           <div>
             <div className="mb-6">
-              <img src={gratusLogo} alt="Gratus Travel" className="h-16 w-auto" />
+              <img src={gratusLogo} alt="Gratus Travel" className="h-28 md:h-36 w-auto" />
             </div>
             <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-xs">
               Hayalleri rotaya, rotaları anlara, anları unutulmaz deneyimlere dönüştürüyoruz.
