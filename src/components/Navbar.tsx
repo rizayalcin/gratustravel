@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import gratusLogo from "@/assets/gratus-logo.png";
 
 const navItems = [
-  { label: "Hakkımızda", href: "#about" },
-  { label: "Hizmetler", href: "#services" },
-  { label: "Catering", href: "#catering" },
-  { label: "İletişim", href: "#contact" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Partners", href: "#partners" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
