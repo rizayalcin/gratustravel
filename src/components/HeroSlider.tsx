@@ -20,15 +20,13 @@ const HeroSlider = () => {
         <div className="absolute inset-0 bg-background/40" />
       </div>
 
-      {/* Giant logo intro animation */}
+      {/* Giant logo animation - no overlay */}
       <AnimatePresence>
         {showLogo && (
           <motion.div
-            className="absolute inset-0 z-30 flex items-center justify-center bg-background/80"
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 1 }}
+            className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none"
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            transition={{ duration: 0.3 }}
           >
             <motion.img
               src={gratusLogo}
