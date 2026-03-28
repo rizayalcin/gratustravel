@@ -64,26 +64,64 @@ const FooterSection = () => {
             ))}
           </div>
 
-          {/* Social */}
-          <div className="flex flex-col gap-4">
-            <span className="font-body text-xs text-primary tracking-widest uppercase mb-2">Follow Us</span>
-            <div className="flex gap-6 mt-2">
+          {/* Contact Form */}
+          <div className="flex flex-col gap-6">
+            <span className="font-body text-xs text-primary tracking-widest uppercase mb-2">Get in Touch</span>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <Input
+                name="name"
+                placeholder="Full Name *"
+                value={form.name}
+                onChange={handleChange}
+                className="bg-transparent border-border font-body text-sm"
+                required
+              />
+              <Input
+                name="email"
+                type="email"
+                placeholder="Email *"
+                value={form.email}
+                onChange={handleChange}
+                className="bg-transparent border-border font-body text-sm"
+                required
+              />
+              <Input
+                name="phone"
+                type="tel"
+                placeholder="Phone"
+                value={form.phone}
+                onChange={handleChange}
+                className="bg-transparent border-border font-body text-sm"
+              />
+              <Input
+                name="subject"
+                placeholder="Subject *"
+                value={form.subject}
+                onChange={handleChange}
+                className="bg-transparent border-border font-body text-sm"
+                required
+              />
+              <Textarea
+                name="message"
+                placeholder="Message *"
+                value={form.message}
+                onChange={handleChange}
+                className="bg-transparent border-border font-body text-sm min-h-[100px]"
+                required
+              />
+              <Button
+                type="submit"
+                disabled={loading}
+                className="font-body text-xs tracking-widest uppercase px-8 py-5 w-fit"
+              >
+                {loading ? "Sending..." : "Send Message"}
+              </Button>
+            </form>
+            <div className="flex gap-6 mt-4">
               <a href="#" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors tracking-widest uppercase">Instagram</a>
               <a href="#" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors tracking-widest uppercase">LinkedIn</a>
             </div>
           </div>
-        </div>
-
-        {/* Contact Form */}
-        <div className="mt-20 pt-12 border-t border-border">
-          <motion.h3
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="font-display text-3xl md:text-4xl font-light text-foreground mb-10"
-          >
-            Get in Touch
-          </motion.h3>
 
           <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-6 max-w-4xl">
             <Input
