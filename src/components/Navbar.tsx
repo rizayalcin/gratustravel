@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import GratusLogo from "@/components/GratusLogo";
+import gratusLogo from "@/assets/gratus-logo.png";
 
 const navItems = [
   { label: "Hakkımızda", href: "#about" },

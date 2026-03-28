@@ -1,4 +1,4 @@
-import GratusLogo from "@/components/GratusLogo";
+import gratusLogo from "@/assets/gratus-logo.png";
 
 const FooterSection = () => {
   return (
