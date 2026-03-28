@@ -47,7 +47,7 @@ const HeroSlider = () => {
           allow="autoplay; encrypted-media"
           allowFullScreen={false}
         />
-        <div className="absolute inset-0 bg-background/40" />
+        <div className="absolute inset-0 bg-background/20" />
       </div>
 
       {/* Giant logo → flies to header */}
