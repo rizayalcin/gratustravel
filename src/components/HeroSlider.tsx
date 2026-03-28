@@ -1,4 +1,10 @@
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import gratusLogo from "@/assets/gratus-logo.png";
+
 const HeroSlider = () => {
+  const [showLogo, setShowLogo] = useState(true);
+
   return (
     <section className="relative w-full h-screen overflow-hidden">
       {/* YouTube video background */}
@@ -14,7 +20,38 @@ const HeroSlider = () => {
         <div className="absolute inset-0 bg-background/40" />
       </div>
 
-      {/* Scroll indicator - left side, more prominent */}
+      {/* Giant logo intro animation */}
+      <AnimatePresence>
+        {showLogo && (
+          <motion.div
+            className="absolute inset-0 z-30 flex items-center justify-center bg-background/80"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+          >
+            <motion.img
+              src={gratusLogo}
+              alt="Gratus Travel"
+              className="w-[60vw] md:w-[40vw] max-w-[600px] brightness-0 invert"
+              initial={{ scale: 0.3, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 2.5, opacity: 0 }}
+              transition={{
+                scale: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+                opacity: { duration: 0.6, ease: "easeOut" },
+              }}
+              onAnimationComplete={(def) => {
+                if ((def as { scale: number }).scale === 1) {
+                  setTimeout(() => setShowLogo(false), 800);
+                }
+              }}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Scroll indicator - left side */}
       <div className="absolute left-8 md:left-12 top-1/2 -translate-y-1/2 z-10 flex flex-col items-center gap-2">
         <span className="font-body text-xs text-foreground/60 tracking-widest uppercase rotate-[-90deg] mb-6" style={{ writingMode: "vertical-rl" }}>
           Scroll
