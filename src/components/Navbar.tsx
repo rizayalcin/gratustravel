@@ -26,20 +26,11 @@ const Navbar = () => {
           <motion.img
             src={gratusLogo}
             alt="Gratus Travel"
-            className="h-12 md:h-14 w-auto brightness-0 invert opacity-90"
+            className="h-16 md:h-20 w-auto brightness-0 invert opacity-90"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={logoReady ? { opacity: 0.9, scale: 1 } : { opacity: 0, scale: 0.5 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
           />
-          <motion.div
-            className="flex flex-col leading-none"
-            initial={{ opacity: 0, x: -10 }}
-            animate={logoReady ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
-            transition={{ duration: 0.4, delay: 0.15, ease: "easeOut" }}
-          >
-            <span className="text-2xl md:text-3xl font-bold text-foreground tracking-[0.2em]" style={{ fontFamily: "'Playfair Display', serif" }}>GRATUS</span>
-            <span className="text-[0.65rem] md:text-sm font-light text-primary tracking-[0.4em] uppercase self-end" style={{ fontFamily: "'Raleway', sans-serif" }}>Travel</span>
-          </motion.div>
         </a>
 
         <button
